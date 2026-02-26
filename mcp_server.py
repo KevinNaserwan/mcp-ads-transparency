@@ -28,7 +28,9 @@ The API provides real-time access to Google Ads Transparency Center data includi
 
 mcp = FastMCP(
    name="Google Ads Library",
-   instructions=INSTRUCTIONS
+   instructions=INSTRUCTIONS,
+   host="0.0.0.0",
+   port=8000
 )
 
 
