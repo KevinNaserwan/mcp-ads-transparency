@@ -12,11 +12,9 @@ services:
     env_file:
       - .env
     
-    # Jika MCP Server ini perlu diakses dari luar/network lain, buka port-nya.
-    # Karena ini MCP stdio, mungkin tidak perlu expose port kecuali Anda 
-    # mengubahnya menjadi SSE/HTTP server.
-    # ports:
-    #   - "8000:8000"
+    # Mengekspose port aplikasi ke host VPS (gunakan 8084 agar tidak bentrok dengan port 8000)
+    ports:
+      - "8084:8000"
     
     # Agar log container bisa masuk ke satu file dan tidak memenuhi disk
     logging:
