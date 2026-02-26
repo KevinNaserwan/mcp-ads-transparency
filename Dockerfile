@@ -17,4 +17,4 @@ COPY mcp_server.py .
 EXPOSE 8000
 
 # Default command (Run with SSE transport instead of stdio)
-ENTRYPOINT ["mcp", "run", "mcp_server.py", "--transport", "sse"]
+ENTRYPOINT ["mcp", "run", "mcp_server.py", "--transport", "sse", "--port", "8000", "--host", "0.0.0.0"]
