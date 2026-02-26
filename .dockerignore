@@ -1,0 +1,13 @@
+.git
+.gitignore
+.github
+.env
+.env.template
+Dockerfile
+docker-compose.*
+readme.md
+install.bat
+install.sh
+smithery.yaml
+__pycache__/
+*.pyc

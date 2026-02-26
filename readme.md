@@ -223,3 +223,4 @@ This project is licensed under the MIT License.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.12+-green.svg)
+# mcp-ads-transparency
