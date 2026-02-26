@@ -13,8 +13,12 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY src ./src
 COPY mcp_server.py .
 
+# Set Uvicorn binding address variables
+ENV HOST=0.0.0.0
+ENV PORT=8000
+
 # Expose port for SSE
 EXPOSE 8000
 
 # Default command (Run with SSE transport instead of stdio)
-ENTRYPOINT ["mcp", "run", "mcp_server.py", "--transport", "sse", "--port", "8000", "--host", "0.0.0.0"]
+ENTRYPOINT ["mcp", "run", "mcp_server.py", "--transport", "sse"]
