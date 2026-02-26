@@ -13,5 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY src ./src
 COPY mcp_server.py .
 
-# Default command
-ENTRYPOINT ["python", "mcp_server.py"]
+# Expose port for SSE
+EXPOSE 8000
+
+# Default command (Run with SSE transport instead of stdio)
+ENTRYPOINT ["mcp", "run", "mcp_server.py", "--transport", "sse"]
